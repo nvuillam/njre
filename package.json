@@ -25,6 +25,9 @@
   "files": [
     "lib/*.js"
   ],
+  "engines": {
+    "node": ">=8"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run docs && git add DOCS.md"
