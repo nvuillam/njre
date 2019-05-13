@@ -1,0 +1,9 @@
+{
+  "name": "njre",
+  "version": "1.0.0",
+  "description": "Easily install and use JRE form a Node application.",
+  "main": "index.js",
+  "repository": "github:raftario/njre",
+  "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com)",
+  "license": "MIT"
+}
