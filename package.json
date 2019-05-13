@@ -8,7 +8,9 @@
   "license": "MIT",
   "dependencies": {
     "command-exists-promise": "^2.0.2",
-    "node-fetch": "^2.5.0"
+    "node-fetch": "^2.5.0",
+    "tar": "^4.4.8",
+    "yauzl": "^2.10.0"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^5.0.0",
