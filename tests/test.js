@@ -1,3 +1,5 @@
+/* global describe, it */
+
 const njre = require('..')
 
 describe('Install', () => {

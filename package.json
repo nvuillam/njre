@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "lib/*.js": [
+    "*.js": [
       "standard --fix",
       "git add"
     ]
