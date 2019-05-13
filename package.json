@@ -1,12 +1,23 @@
 {
   "name": "njre",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Easily install and use JRE form a Node application.",
+  "keywords": [
+    "jre",
+    "java",
+    "javaw",
+    "jdk",
+    "openjdk",
+    "adoptopenjdk"
+  ],
+  "homepage": "https://github.com/raftario/njre",
+  "bugs": "https://github.com/raftario/njre/issues",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/test.js",
-    "coverage": "nyc mocha tests/test.js",
-    "lint": "standard --fix"
+    "coverage": "nyc npm run test",
+    "lint": "standard --fix",
+    "docs": "jsdoc2md index.js lib/*.js > DOCS.md"
   },
   "repository": "github:raftario/njre",
   "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com)",
@@ -16,7 +27,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run docs && git add DOCS.md"
     }
   },
   "lint-staged": {
@@ -25,6 +36,7 @@
       "git add"
     ]
   },
+  "private": false,
   "dependencies": {
     "command-exists-promise": "^2.0.2",
     "node-fetch": "^2.5.0",
