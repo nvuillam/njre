@@ -17,3 +17,7 @@ Installs a JRE copy for the app
 | [options.type] | <code>string</code> | <code>&quot;jre&quot;</code> | Binary Type (`jre`/`jdk`) |
 | [options.heap_size] | <code>string</code> |  | Heap Size (`normal`/`large`) |
 
+**Example**  
+```js
+const njre = require('njre')// Use default optionsnjre.install()  .then(dir => {    // Do stuff  })  .catch(err => {    // Handle the error  })// or custom onesnjre.install(11, { os: 'aix', arch: 'ppc64', openjdk_impl: 'openj9' })  .then(dir => {    // Do stuff  })  .catch(err => {    // Handle the error  })
+```
