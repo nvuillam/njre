@@ -19,5 +19,23 @@ Installs a JRE copy for the app
 
 **Example**  
 ```js
-const njre = require('njre')// Use default optionsnjre.install()  .then(dir => {    // Do stuff  })  .catch(err => {    // Handle the error  })// or custom onesnjre.install(11, { os: 'aix', arch: 'ppc64', openjdk_impl: 'openj9' })  .then(dir => {    // Do stuff  })  .catch(err => {    // Handle the error  })
+const njre = require('njre')
+
+// Use default options
+njre.install()
+  .then(dir => {
+    // Do stuff
+  })
+  .catch(err => {
+    // Handle the error
+  })
+
+// or custom ones
+njre.install(11, { os: 'aix', arch: 'ppc64', openjdk_impl: 'openj9' })
+  .then(dir => {
+    // Do stuff
+  })
+  .catch(err => {
+    // Handle the error
+  })
 ```
