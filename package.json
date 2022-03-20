@@ -19,8 +19,8 @@
     "lint": "standard --fix",
     "docs": "jsdoc2md index.js lib/*.js > DOCS.md"
   },
-  "repository": "github:raftario/njre",
-  "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com)",
+  "repository": "github:nvuillam/njre",
+  "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com), Nicolas Vuillamy <nicolas.vuillamy@gmail.com> (nicolas.vuillamy.fr)",
   "license": "MIT",
   "files": [
     "lib/*.js"
@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run docs && git add DOCS.md"
+      "pre-commit2": "lint-staged && npm run docs && git add DOCS.md"
     }
   },
   "lint-staged": {
