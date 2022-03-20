@@ -7,7 +7,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/nvuillam/njre.svg)](https://github.com/nvuillam/njre/graphs/contributors/)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/nvuillam)](https://github.com/sponsors/nvuillam)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/njre.svg) 
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/njre.svg)
 
 Easily install and use JRE from a Node application.
 
