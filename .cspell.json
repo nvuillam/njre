@@ -1,0 +1,40 @@
+{
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/**",
+    ".vscode",
+    "megalinter",
+    "package-lock.json",
+    "report"
+  ],
+  "language": "en",
+  "version": "0.1",
+  "words": [
+    "MARKDOWNLINT",
+    "Rapha",
+    "Rapha\u00ebl",
+    "Th\u00e9riault",
+    "Vuillamy",
+    "aarch",
+    "adoptopenjdk",
+    "dotenv",
+    "eslintcache",
+    "fileurl",
+    "hotspot",
+    "javaw",
+    "jscoverage",
+    "jspm",
+    "njre",
+    "nvuillam",
+    "openj",
+    "pids",
+    "raphaeltheriault",
+    "riault",
+    "sparcv",
+    "stefanzweifel",
+    "venv",
+    "vuillamy",
+    "wscript"
+  ]
+}

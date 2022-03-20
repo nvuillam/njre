@@ -19,8 +19,8 @@
     "lint": "standard --fix",
     "docs": "jsdoc2md index.js lib/*.js > DOCS.md"
   },
-  "repository": "github:raftario/njre",
-  "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com)",
+  "repository": "github:nvuillam/njre",
+  "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com), Nicolas Vuillamy <nicolas.vuillamy@gmail.com> (nicolas.vuillamy.fr)",
   "license": "MIT",
   "files": [
     "lib/*.js"
@@ -47,6 +47,7 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
+    "eslint": "^5.4.0",
     "husky": "^2.2.0",
     "jsdoc-to-markdown": "^5.0.0",
     "lint-staged": "^8.1.6",
