@@ -16,7 +16,7 @@ describe('Install', () => {
   }).timeout(100000)
 
   it('should install JRE 14 from AdoptOpenJdk without throwing an error', () => {
-    return njre.install(14, { os: 'linux'})
+    return njre.install(14, { os: 'linux' })
   }).timeout(100000)
 
   it('should install JRE 20 from Eclipse Foundation without throwing an error', () => {
