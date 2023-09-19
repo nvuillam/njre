@@ -37,4 +37,3 @@ jobs:
       - run: yarn config set network-timeout 300000 && yarn publish || echo "Unable to publish package version. Or published in background because of NPM bug ?"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
