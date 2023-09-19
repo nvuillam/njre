@@ -1,3 +1,26 @@
+## Functions
+
+<dl>
+<dt><a href="#followToAdoptium">followToAdoptium()</a></dt>
+<dd><p>The API will decide if it needs to redirect from api.adoptopenjdk.net to
+api.adoptium.net before finally redirecting to the binary. This function
+handles the initial redirection if needed, otherwise it just returns the
+location url for the binary.</p>
+</dd>
+<dt><a href="#install">install([version], [options])</a> ⇒</dt>
+<dd><p>Installs a JRE copy for the app</p>
+</dd>
+</dl>
+
+<a name="followToAdoptium"></a>
+
+## followToAdoptium()
+The API will decide if it needs to redirect from api.adoptopenjdk.net to
+api.adoptium.net before finally redirecting to the binary. This function
+handles the initial redirection if needed, otherwise it just returns the
+location url for the binary.
+
+**Kind**: global function  
 <a name="install"></a>
 
 ## install([version], [options]) ⇒
@@ -16,6 +39,7 @@ Installs a JRE copy for the app
 | [options.release]      | <code>string</code> | <code>&quot;latest&quot;</code>  | Release                                                                                        |
 | [options.type]         | <code>string</code> | <code>&quot;jre&quot;</code>     | Binary Type (`jre`/`jdk`)                                                                      |
 | [options.heap_size]    | <code>string</code> |                                  | Heap Size (`normal`/`large`)                                                                   |
+| [options.vendor]       | <code>string</code> |                                  | defaults to adoptopenjdk (`adoptopenjdk`/`eclipse`)                                            |
 
 **Example**  
 ```js
