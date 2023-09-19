@@ -61,3 +61,4 @@ typings/
 .next
 
 report/
+megalinter-reports/

@@ -1,5 +1,5 @@
-'use strict'
+"use strict";
 
 module.exports = {
-  install: require('./lib/install')
-}
+  install: require("./lib/install"),
+};
