@@ -8,7 +8,8 @@
     "javaw",
     "jdk",
     "openjdk",
-    "adoptopenjdk"
+    "adoptopenjdk",
+    "adoptium"
   ],
   "homepage": "https://github.com/raftario/njre",
   "bugs": "https://github.com/raftario/njre/issues",
