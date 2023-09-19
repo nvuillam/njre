@@ -10,6 +10,7 @@ APPLY_FIXES: all # all, none, or list of linter keys
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
 GITHUB_STATUS_REPORTER: false
+JAVASCRIPT_DEFAULT_STYLE: prettier
 # DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 MARKDOWN_MARKDOWNLINT_FILTER_REGEX_EXCLUDE: (DOCS\.md)
 YAML_V8R_FILTER_REGEX_EXCLUDE: (appveyor) # Exclude regex for a single linter
