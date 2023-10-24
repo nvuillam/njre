@@ -43,7 +43,7 @@
   "private": false,
   "dependencies": {
     "command-exists-promise": "^2.0.2",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^3.0.0",
     "tar": "^6.0.0",
     "yauzl": "^2.10.0"
   },
