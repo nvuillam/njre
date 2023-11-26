@@ -23,6 +23,10 @@ describe("Install", () => {
     return njre.install(14, { os: "linux" });
   }).timeout(100000);
 
+  it("should install JDK 17 without throwing an error", () => {
+    return njre.install(17, { type: "jdk" });
+  }).timeout(100000);
+
   it("should install JRE 20 from Eclipse Foundation without throwing an error", () => {
     return njre.install(20, { vendor: "eclipse" });
   }).timeout(100000);
