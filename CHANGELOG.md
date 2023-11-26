@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [v1.0.0] - 2023-11-26
 
-- migrate to adaptopenjdk API v3 by @mheiges in https://github.com/nvuillam/njre/pull/35
+- migrate to adoptopenjdk API v3 by @mheiges in https://github.com/nvuillam/njre/pull/35
 - Configure Renovate by @renovate in https://github.com/nvuillam/njre/pull/34
 - Update all non-major dependencies by @renovate in https://github.com/nvuillam/njre/pull/36
 - Update actions/upload-artifact action to v3 by @renovate in https://github.com/nvuillam/njre/pull/40
