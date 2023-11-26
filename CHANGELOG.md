@@ -16,15 +16,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [v1.0.0] - 2023-11-26
 
-- migrate to adoptopenjdk API v3 by @mheiges in https://github.com/nvuillam/njre/pull/35
-- Configure Renovate by @renovate in https://github.com/nvuillam/njre/pull/34
-- Update all non-major dependencies by @renovate in https://github.com/nvuillam/njre/pull/36
-- Update actions/upload-artifact action to v3 by @renovate in https://github.com/nvuillam/njre/pull/40
-- Update actions/checkout action to v4 by @renovate in https://github.com/nvuillam/njre/pull/37
-- Update actions/setup-node action to v3 by @renovate in https://github.com/nvuillam/njre/pull/39
-- Update dependency eslint to v8 by @renovate in https://github.com/nvuillam/njre/pull/41
-- Update dependency husky to v8 by @renovate in https://github.com/nvuillam/njre/pull/42
-- yarn upgrade by @nvuillam in https://github.com/nvuillam/njre/pull/43
+- migrate to adoptopenjdk API v3 by @mheiges in <https://github.com/nvuillam/njre/pull/35>
+- Configure Renovate by @renovate in <https://github.com/nvuillam/njre/pull/34>
+- Update all non-major dependencies by @renovate in <https://github.com/nvuillam/njre/pull/36>
+- Update actions/upload-artifact action to v3 by @renovate in <https://github.com/nvuillam/njre/pull/40>
+- Update actions/checkout action to v4 by @renovate in <https://github.com/nvuillam/njre/pull/37>
+- Update actions/setup-node action to v3 by @renovate in <https://github.com/nvuillam/njre/pull/39>
+- Update dependency eslint to v8 by @renovate in <https://github.com/nvuillam/njre/pull/41>
+- Update dependency husky to v8 by @renovate in <https://github.com/nvuillam/njre/pull/42>
+- yarn upgrade by @nvuillam in <https://github.com/nvuillam/njre/pull/43>
 
 ## [v0.30.0] - The past
 
