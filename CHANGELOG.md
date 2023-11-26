@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Handle compatibility with Mac M1
 - Provide more information when unable to install java
+- Add more test cases on more platforms
 - Create CHANGELOG.md
 
 ## [v1.0.0] - 2023-11-26
