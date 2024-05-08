@@ -1780,7 +1780,7 @@ human-signals@^4.3.0:
 husky@^9.0.0:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.1.tgz#710ed0d06b7fb2f5723ea8db436b632e7aecc284"
-  integrity sha512-rXCT8yF2v3awSG03AG6IgICDhJ+m8o3jL1ROwsT4nQZ6urEyKSj0IWFDIh5YC2zgZeAxWksNMbN6rYY4BE1Zrw==
+  integrity "sha1-cQ7Q0Gt/svVyPqjbQ2tjLnrswoQ= sha512-rXCT8yF2v3awSG03AG6IgICDhJ+m8o3jL1ROwsT4nQZ6urEyKSj0IWFDIh5YC2zgZeAxWksNMbN6rYY4BE1Zrw=="
 
 ignore@^5.1.1, ignore@^5.2.0:
   version "5.2.4"
@@ -3422,9 +3422,9 @@ table-layout@^0.4.2:
     wordwrapjs "^3.0.0"
 
 tar@^6.0.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.2.0.tgz#b14ce49a79cb1cd23bc9b016302dea5474493f73"
-  integrity "sha1-sUzkmnnLHNI7ybAWMC3qVHRJP3M= sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ=="
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.2.1.tgz#717549c541bc3c2af15751bea94b1dd068d4b03a"
+  integrity sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
