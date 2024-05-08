@@ -30,4 +30,8 @@ describe("Install", () => {
   it("should install JRE 20 from Eclipse Foundation without throwing an error", () => {
     return njre.install(20, { vendor: "eclipse" });
   }).timeout(100000);
+
+  it("should install JRE 21 from Eclipse Foundation without throwing an error", () => {
+    return njre.install(21, { vendor: "eclipse" });
+  }).timeout(100000);
 });
