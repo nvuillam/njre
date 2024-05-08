@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Fix issue with Mac with default values
 - Add debug trace "njre"
+- Upgrade all npm dependencies
 
 ## [v1.1.0] - 2023-11-26
 
