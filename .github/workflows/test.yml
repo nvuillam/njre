@@ -28,3 +28,5 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Run tests
         run: yarn test
+        env:
+          DEBUG: njre
