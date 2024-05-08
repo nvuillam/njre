@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
+      fail-fast: false
     name: Test
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ${{ matrix.os }}
@@ -28,3 +29,5 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Run tests
         run: yarn test
+        env:
+          DEBUG: njre

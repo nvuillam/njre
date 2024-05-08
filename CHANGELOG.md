@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add your updates here !
 
+## [v1.2.0] - 2024-05-08
+
+- Fix issue with Mac with default values
+- Add debug trace "njre"
+- Upgrade all npm dependencies
+
 ## [v1.1.0] - 2023-11-26
 
 - Handle compatibility with Mac M1
