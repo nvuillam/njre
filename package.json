@@ -55,7 +55,7 @@
     "lint-staged": "^15.2.2",
     "markdown-table-formatter": "^1.6.0",
     "mocha": "^10.4.0",
-    "nyc": "^15.0.0",
+    "nyc": "^17.0.0",
     "standard": "^17.0.0"
   }
 }
