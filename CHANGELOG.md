@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add your updates here !
 
+## [v1.2.2] - 2024-07-16
+
+- Upgrade npm dependencies
+
 ## [v1.2.1] - 2024-05-08
 
 - Fix bug always installing Java 11 on Mac
