@@ -6,8 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v1.3.0] - 2024-08-20
+
 - Add [github-dependents-info](https://github.com/nvuillam/github-dependents-info)
-- Add your updates here !
+- Upgrade npm dependencies
 
 ## [v1.2.2] - 2024-07-16
 
