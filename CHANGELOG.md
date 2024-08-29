@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v1.4.0] - 2024-08-30
+
+- Allow to force an installation path for java using option `installPath`
+
 ## [v1.3.0] - 2024-08-20
 
 - Add [github-dependents-info](https://github.com/nvuillam/github-dependents-info)
