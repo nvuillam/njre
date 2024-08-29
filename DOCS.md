@@ -40,6 +40,8 @@ Installs a JRE copy for the app
 | [options.type]         | <code>string</code> | <code>&quot;jre&quot;</code>     | Binary Type (`jre`/`jdk`)                                                                      |
 | [options.heap_size]    | <code>string</code> |                                  | Heap Size (`normal`/`large`)                                                                   |
 | [options.vendor]       | <code>string</code> |                                  | defaults to adoptopenjdk (`adoptopenjdk`/`eclipse`)                                            |
+| [options.installPath]  | <code>string</code> |                                  | Where to install java (default process.cwd())                                                  |
+
 
 **Example**  
 ```js
@@ -56,6 +58,15 @@ njre.install()
 
 // or custom ones
 njre.install(11, { os: 'aix', arch: 'ppc64', openjdk_impl: 'openj9' })
+  .then(dir => {
+    // Do stuff
+  })
+  .catch(err => {
+    // Handle the error
+  })
+
+  // or custom ones
+njre.install(17, { os: 'aix', arch: 'amd64', openjdk_impl: 'openj9', installPath: "/home/tmp/java" })
   .then(dir => {
     // Do stuff
   })
