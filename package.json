@@ -51,7 +51,7 @@
   "devDependencies": {
     "eslint": "^9.2.0",
     "husky": "^9.0.11",
-    "jsdoc-to-markdown": "^8.0.1",
+    "jsdoc-to-markdown": "^9.0.0",
     "lint-staged": "^15.2.2",
     "markdown-table-formatter": "^1.6.0",
     "mocha": "^10.4.0",
