@@ -160,11 +160,11 @@
     picocolors "^1.0.0"
 
 "@babel/parser@^7.20.15":
-  version "7.25.3"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.25.3.tgz#91fb126768d944966263f0657ab222a642b82065"
-  integrity sha512-iLTJKDbJ4hMvFPgQwwsVoxtHyWpKKPBrxkANrSYewDPaPpT5py5yeVkgPIJ7XYXhndxJpaA3PyALSXQ7u8e/Dw==
+  version "7.25.6"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.25.6.tgz#85660c5ef388cbbf6e3d2a694ee97a38f18afe2f"
+  integrity sha512-trGdfBdbD0l1ZPmcJ83eNxB9rbEax4ALFTF7fN386TMYbeCQbyme5cOEXQhbGXKebwGaB/J52w1mrklMcbgy6Q==
   dependencies:
-    "@babel/types" "^7.25.2"
+    "@babel/types" "^7.25.6"
 
 "@babel/parser@^7.23.9", "@babel/parser@^7.24.7":
   version "7.24.7"
@@ -205,10 +205,10 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.25.2":
-  version "7.25.2"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.25.2.tgz#55fb231f7dc958cd69ea141a4c2997e819646125"
-  integrity sha512-YTnYtra7W9e6/oAZEHj0bJehPRUlLH9/fbpT5LfB0NhQXyALCRkRs3zH9v07IYhkgpqX6Z78FnuccZr/l4Fs4Q==
+"@babel/types@^7.25.6":
+  version "7.25.6"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.25.6.tgz#893942ddb858f32ae7a004ec9d3a76b3463ef8e6"
+  integrity sha512-/l42B1qxpG6RdfYf343Uw1vmDjeNhneUXtzhojE7pDgfpEypmRhI6j1kr17XCVv4Cgl9HdAiQY2x0GwKm7rWCw==
   dependencies:
     "@babel/helper-string-parser" "^7.24.8"
     "@babel/helper-validator-identifier" "^7.24.7"
@@ -1037,10 +1037,10 @@ diff@^5.2.0:
   resolved "https://registry.yarnpkg.com/diff/-/diff-5.2.0.tgz#26ded047cd1179b78b9537d5ef725503ce1ae531"
   integrity sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==
 
-dmd@^7.0.5:
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/dmd/-/dmd-7.0.5.tgz#f139741b48f9b227e99c692023d0e337196527d7"
-  integrity sha512-L/+QeMhaAbKufDUVxbWMprigu+YB0lhLS76KzMc151q2OFCvgbgSwqPbM8v3Xj0uDRPeGuYo71RCSyHKf+pJjA==
+dmd@^7.0.6:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/dmd/-/dmd-7.0.6.tgz#325f78d3093e7227b17991ebf9d9973f203049fa"
+  integrity sha512-Z2044iEaeaXuNY+FItBshyrFtHyMkokzlTDlD9LeB7xEA6tmfmME5w1SJYapnfDYgF82QD8GgZ+jZ5V2dcN0Iw==
   dependencies:
     array-back "^6.2.2"
     cache-point "^3.0.0"
@@ -2366,15 +2366,15 @@ jsdoc-parse@^6.2.4:
     sort-array "^5.0.0"
 
 jsdoc-to-markdown@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/jsdoc-to-markdown/-/jsdoc-to-markdown-9.0.0.tgz#3de8de48e655e58d68b09f60a704d27159797107"
-  integrity sha512-wUgad4sac29h3uKbaqV9D49BqHXB0JvoZH3u8Jt6f4hMMcGPtA8RNwV31YJpgsZV5QFMxaT9ben9h52I6rGyUQ==
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/jsdoc-to-markdown/-/jsdoc-to-markdown-9.0.1.tgz#1dba21288ad061463415c9fac6ead1153a34cc31"
+  integrity sha512-iWPQKA43vxKDe/dixF+GHjAU1ds0P2yXJLBdeKGKXMggjgsy3sHlnIrT6IdxcUB8vTGQy/Z2c3ureUbDWwYL3A==
   dependencies:
     array-back "^6.2.2"
     command-line-args "^6.0.0"
     command-line-usage "^7.0.3"
     config-master "^3.1.0"
-    dmd "^7.0.5"
+    dmd "^7.0.6"
     jsdoc-api "^9.3.1"
     jsdoc-parse "^6.2.4"
     walk-back "^5.1.1"
@@ -3760,9 +3760,9 @@ uc.micro@^2.0.0, uc.micro@^2.1.0:
   integrity sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==
 
 uglify-js@^3.1.4:
-  version "3.19.2"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.19.2.tgz#319ae26a5fbd18d03c7dc02496cfa1d6f1cd4307"
-  integrity sha512-S8KA6DDI47nQXJSi2ctQ629YzwOVs+bQML6DAtvy0wgNdpi+0ySpQK0g2pxBq2xfF2z3YCscu7NNA8nXT9PlIQ==
+  version "3.19.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.19.3.tgz#82315e9bbc6f2b25888858acd1fff8441035b77f"
+  integrity sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
