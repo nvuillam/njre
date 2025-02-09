@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v1.4.1] - 2025-02-06
+
+- fix: Add `installPath` parameter type annotation.
+
 ## [v1.4.0] - 2024-08-30
 
 - Allow to force an installation path for java using option `installPath`
