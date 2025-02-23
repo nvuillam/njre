@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v1.4.2] - 2025-02-23
+
+- Remove fallback for release workflow
+- Upgrade dependencies
+
 ## [v1.4.1] - 2025-02-09
 
 - fix: Add `installPath` parameter type annotation.
