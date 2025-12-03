@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v1.5.0] - 2025-12-03
+
 - CI: Upgrade MegaLinter to v9
 - Upgrade dependencies
 
