@@ -21,7 +21,9 @@ permissions: read-all
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions: read-all
+    permissions:
+      id-token: write # Required for OIDC
+      contents: read
     environment:
       name: release
     steps:
