@@ -36,4 +36,4 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: "nvuillam"
       - run: yarn
-      - run: yarn config set network-timeout 300000 && yarn publish
+      - run: yarn config set network-timeout 300000 && npm publish
