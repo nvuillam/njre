@@ -6,7 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
-## [v1.5.1] - 2025-21-01
+## [v1.5.2] - 2025-01-22
+
+- Upgrade dependencies
+- Fix workflow to use npm Trusted publishers to release (OIDC) - needs npm publish instead of yarn publish, not yarn publish with NODE_AUTH_TOKEN
+
+## [v1.5.1] - 2025-01-21
 
 - Upgrade dependencies
 - Use npm Trusted publishers to release (OIDC)
