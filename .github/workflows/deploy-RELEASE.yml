@@ -37,5 +37,3 @@ jobs:
           scope: "nvuillam"
       - run: yarn
       - run: yarn config set network-timeout 300000 && yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
