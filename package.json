@@ -1,6 +1,6 @@
 {
   "name": "njre",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Easily install and use JRE from a Node application.",
   "keywords": [
     "jre",
