@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v1.5.4] - 2025-03-29
+
+- Upgrade dependencies
+
 ## [v1.5.3] - 2025-02-28
 
 - Upgrade dependencies
