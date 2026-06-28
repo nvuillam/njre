@@ -21,7 +21,7 @@
     "docs": "jsdoc2md index.js lib/*.js > DOCS.md && markdown-table-formatter DOCS.md"
   },
   "repository": "github:nvuillam/njre",
-  "author": "Rapha\u00c3\u00abl Th\u00c3\u00a9riault <raphael_theriault@outlook.com> (raphaeltheriault.com), Nicolas Vuillamy <nicolas.vuillamy@gmail.com> (nicolas.vuillamy.fr)",
+  "author": "RaphaÃ«l ThÃ©riault <raphael_theriault@outlook.com> (raphaeltheriault.com), Nicolas Vuillamy <nicolas.vuillamy@gmail.com> (nicolas.vuillamy.fr)",
   "license": "MIT",
   "files": [
     "lib/*.js"
