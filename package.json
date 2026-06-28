@@ -59,7 +59,7 @@
     "standard": "^17.0.0"
   },
   "resolutions": {
-    "@babel/core": "7.29.6",
+    "@babel/core": "8.0.1",
     "diff": "8.0.3",
     "lodash": "4.18.0",
     "serialize-javascript": "7.0.5",
