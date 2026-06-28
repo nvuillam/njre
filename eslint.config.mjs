@@ -1,21 +1,32 @@
-import js from '@eslint/js'
-import globals from 'globals'
-
 export default [
-  // Ignore patterns (node_modules only; lib/ is source and must be linted)
+  // Ignore patterns (node_modules only; lib/ is source)
   {
     ignores: ['node_modules/']
   },
 
-  // JavaScript files: equivalent to legacy `eslint:recommended` + env node/commonjs/es2021
+  // JavaScript files: minimal self-contained config (no external imports, so it
+  // resolves under MegaLinter's bundled ESLint where ESM ignores NODE_PATH)
   {
     files: ['**/*.js'],
-    ...js.configs.recommended,
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'commonjs',
       globals: {
-        ...globals.node
+        require: 'readonly',
+        module: 'writable',
+        exports: 'writable',
+        process: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        console: 'readonly',
+        Buffer: 'readonly',
+        URL: 'readonly',
+        global: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        setImmediate: 'readonly'
       }
     },
     rules: {}
