@@ -8,10 +8,12 @@ describe("Install", () => {
   }).timeout(100000);
 
   it("should install JRE with custom options without throwing an error", () => {
-    return njre.install(11, {
+    // Eclipse Temurin (api.adoptium.net) ships HotSpot only and for the
+    // aix/ppc64 platform; openj9 used to come from the dead api.adoptopenjdk.net.
+    return njre.install(17, {
       os: "aix",
       arch: "ppc64",
-      openjdk_impl: "openj9",
+      openjdk_impl: "hotspot",
     });
   }).timeout(100000);
 
@@ -19,8 +21,9 @@ describe("Install", () => {
     return njre.install(null, { release: "jdk-21+34-ea-beta" });
   }).timeout(100000);
 
-  it("should install JRE 14 from AdoptOpenJdk without throwing an error", () => {
-    return njre.install(14, { os: "linux" });
+  it("should install JRE 17 from Adoptium without throwing an error", () => {
+    // Java 14 had no GA Temurin build; use a GA version (Temurin GA: 8/11/17/21).
+    return njre.install(17, { os: "linux" });
   }).timeout(100000);
 
   it("should install JDK 17 without throwing an error", () => {
