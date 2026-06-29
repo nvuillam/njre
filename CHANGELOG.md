@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v2.0.0] - 2026-06-29
+
+- **BREAKING**: Change default download URL to the Adoptium API (`https://api.adoptium.net`), replacing the previous default endpoint. Existing integrations relying on the former default URL must update their configuration accordingly.
+- Upgrade dependencies
+
 ## [v1.5.5] - 2026-06-29
 
 - Upgrade dependencies
