@@ -65,6 +65,6 @@
     "serialize-javascript": "7.0.6",
     "underscore": "1.13.8",
     "uuid": "14.0.1",
-    "js-yaml": "4.3.0"
+    "js-yaml": "5.2.0"
   }
 }
