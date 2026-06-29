@@ -39,7 +39,7 @@ Installs a JRE copy for the app
 | [options.release]      | <code>string</code> | <code>&quot;latest&quot;</code>  | Release                                                                                        |
 | [options.type]         | <code>string</code> | <code>&quot;jre&quot;</code>     | Binary Type (`jre`/`jdk`)                                                                      |
 | [options.heap_size]    | <code>string</code> |                                  | Heap Size (`normal`/`large`)                                                                   |
-| [options.vendor]       | <code>string</code> |                                  | defaults to adoptopenjdk (`adoptopenjdk`/`eclipse`)                                            |
+| [options.vendor]       | <code>string</code> | <code>&quot;eclipse&quot;</code> | JRE/JDK vendor (`eclipse`/`adoptopenjdk`). Both resolve to api.adoptium.net (Eclipse Temurin); the deprecated api.adoptopenjdk.net host is no longer used. |
 | [options.installPath]  | <code>string</code> |                                  | Where to install java (default process.cwd())                                                  |
 
 
