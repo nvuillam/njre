@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fix: ZIP extraction now waits for each file to be fully written and closed on disk before moving to the next entry, instead of only waiting for the read stream to end (installs could end up with empty or truncated files, mostly on Windows)
 - Extend the test suite: cross-OS/arch/version install matrix with real assertions, error cases, and proxy tests against a local authenticated CONNECT proxy
 - CI: run tests on a matrix of OS × Node.js versions (18/20/22/24)
-- Dev dependencies: keep the tooling installable on Node.js 18 and 20 (`@babel/core` and `serialize-javascript` resolutions back to Node-18-compatible patched versions, `nyc` 17, `lint-staged` 15)
+- Dev dependencies reduced to `prettier` only: tests now run on the Node.js built-in `node:test` runner (replacing mocha + nyc, coverage via `--experimental-test-coverage`), and the inactive husky/lint-staged configuration is removed. This empties the whole transitive dev tree (9 packages audited, 0 vulnerabilities) and makes every `resolutions` security pin unnecessary - the field is removed
 
 ## [v2.0.0] - 2026-06-29
 

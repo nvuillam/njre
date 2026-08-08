@@ -64,3 +64,6 @@ report/
 megalinter-reports/
 
 .sfdx/
+
+# JRE extracted by the default-options test
+tests/jre/
