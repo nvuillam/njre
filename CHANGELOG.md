@@ -12,8 +12,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Reduce direct dependencies from 5 to 2 (`tar` and `yauzl` only): replace `node-fetch` with the Node.js built-in `https` module, drop the unused `command-exists-promise`, and replace `debug` with `util.debuglog`
 - Modernize `lib/install.js` (async/await, `fs/promises`, stream pipelines); downloads now use a socket-inactivity timeout instead of a total-time limit
 - Remove the generated DOCS.md: the API is documented in README.md, development info in CLAUDE.md
+- Fix: the Java 8 → 11 fallback (Java 8 is not published for macOS) is now based on the **target** OS (`options.os`) instead of the host platform, so installing a Linux or Windows JRE 8 from a Mac no longer silently installs Java 11
+- Fix: ZIP extraction now waits for each file to be fully written and closed on disk before moving to the next entry, instead of only waiting for the read stream to end (installs could end up with empty or truncated files, mostly on Windows)
 - Extend the test suite: cross-OS/arch/version install matrix with real assertions, error cases, and proxy tests against a local authenticated CONNECT proxy
 - CI: run tests on a matrix of OS × Node.js versions (18/20/22/24)
+- Dev dependencies: keep the tooling installable on Node.js 18 and 20 (`@babel/core` and `serialize-javascript` resolutions back to Node-18-compatible patched versions, `nyc` 17, `lint-staged` 15)
 
 ## [v2.0.0] - 2026-06-29
 
