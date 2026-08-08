@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+- **BREAKING**: Require Node.js >= 18 (`engines` was previously `>=8`)
+- **BREAKING**: Debug logs are now enabled with `NODE_DEBUG=njre` (built-in `util.debuglog`) instead of `DEBUG=njre`
+- Add proxy support through the standard `HTTPS_PROXY` / `HTTP_PROXY` / `NO_PROXY` environment variables, including Basic auth credentials in the proxy URL (#30)
+- Reduce direct dependencies from 5 to 2 (`tar` and `yauzl` only): replace `node-fetch` with the Node.js built-in `https` module, drop the unused `command-exists-promise`, and replace `debug` with `util.debuglog`
+- Modernize `lib/install.js` (async/await, `fs/promises`, stream pipelines); downloads now use a socket-inactivity timeout instead of a total-time limit
+- Remove the generated DOCS.md: the API is documented in README.md, development info in CLAUDE.md
+- Extend the test suite: cross-OS/arch/version install matrix with real assertions, error cases, and proxy tests against a local authenticated CONNECT proxy
+- CI: run tests on a matrix of OS × Node.js versions (18/20/22/24)
+
 ## [v2.0.0] - 2026-06-29
 
 - **BREAKING**: Change default download URL to the Adoptium API (`https://api.adoptium.net`), replacing the previous default endpoint. Existing integrations relying on the former default URL must update their configuration accordingly.

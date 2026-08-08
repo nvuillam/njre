@@ -9,6 +9,62 @@
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/nvuillam)](https://github.com/sponsors/nvuillam)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-Easily install and use JRE from a Node application.
+Easily install and use JRE (or JDK) from a Node application. Binaries are downloaded from [Eclipse Temurin / Adoptium](https://adoptium.net/), verified against their SHA-256 checksum, and extracted locally.
 
-## [Docs](DOCS.md)
+- Requires Node.js >= 18
+- Only 2 dependencies (`tar` and `yauzl`, for archive extraction) - everything else uses Node.js built-in modules
+
+## Installation
+
+```bash
+npm install njre
+```
+
+## Usage
+
+```js
+const njre = require("njre");
+
+// Install the default JRE (Java 8, or Java 11 on macOS) next to the app
+const dir = await njre.install();
+
+// Or customize the version and options
+const dir = await njre.install(21, { type: "jdk", installPath: "/opt/my-app" });
+```
+
+## API
+
+### `install([version], [options])` ⇒ `Promise<string>`
+
+Downloads and extracts a JRE/JDK copy for the app. Resolves to the installation directory (a `jre` folder containing the extracted `jdk-...` distribution), or rejects with an error.
+
+| Param                    | Type     | Default                             | Description                                                                                                                                                |
+| ------------------------ | -------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[version]`              | `number` | `8`                                 | Java major version (e.g. `8`/`11`/`17`/`21`). On macOS the minimum is `11`.                                                                                |
+| `[options.os]`           | `string` | current OS                          | Operating System (`windows`/`mac`/`linux`/`solaris`/`aix`)                                                                                                 |
+| `[options.arch]`         | `string` | current CPU                         | Architecture (`x64`/`x32`/`ppc64`/`s390x`/`ppc64le`/`aarch64`/`sparcv9`)                                                                                   |
+| `[options.openjdk_impl]` | `string` | `hotspot`                           | OpenJDK Implementation (`hotspot`)                                                                                                                         |
+| `[options.release]`      | `string` | `latest`                            | Exact release name (e.g. `jdk-21+34-ea-beta`), or `latest` for the latest GA build of `version`                                                            |
+| `[options.type]`         | `string` | `jre`                               | Binary Type (`jre`/`jdk`)                                                                                                                                  |
+| `[options.heap_size]`    | `string` | `normal`                            | Heap Size (`normal`/`large`)                                                                                                                               |
+| `[options.vendor]`       | `string` | `eclipse`                           | JRE/JDK vendor (`eclipse`/`adoptopenjdk`). Both resolve to api.adoptium.net (Eclipse Temurin); the deprecated api.adoptopenjdk.net host is no longer used. |
+| `[options.installPath]`  | `string` | main module path or `process.cwd()` | File or directory path whose parent directory receives the `jre` folder. The parent directory must exist.                                                  |
+
+## Proxy
+
+If the `HTTPS_PROXY` (or `HTTP_PROXY`) environment variable is set (upper or lower case), njre downloads binaries through that proxy (HTTP CONNECT tunnel). Hosts listed in `NO_PROXY` (comma-separated, `*` wildcard supported) bypass it.
+
+```bash
+HTTPS_PROXY=http://proxy.mycompany.com:8080 node my-app.js
+
+# With credentials (Basic auth, percent-encode special characters)
+HTTPS_PROXY=http://user:p%40ssword@proxy.mycompany.com:8080 node my-app.js
+```
+
+## Debug logs
+
+Set `NODE_DEBUG=njre` to print debug logs (resolved download URL, proxy usage).
+
+## Contributing
+
+See [CLAUDE.md](CLAUDE.md) for development setup, project layout and testing instructions.
