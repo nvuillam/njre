@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v3.0.0] - 2026-08-09
+
 - **BREAKING**: Require Node.js >= 18 (`engines` was previously `>=8`)
 - **BREAKING**: Debug logs are now enabled with `NODE_DEBUG=njre` (built-in `util.debuglog`) instead of `DEBUG=njre`
 - Add proxy support through the standard `HTTPS_PROXY` / `HTTP_PROXY` / `NO_PROXY` environment variables, including Basic auth credentials in the proxy URL (#30)
