@@ -38,5 +38,8 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           # Defaults to the user or organization that owns the workflow file
           scope: "nvuillam"
-      - run: yarn
-      - run: yarn config set network-timeout 300000 && npm publish
+      # No install step: the package has no build/prepack scripts, npm publish
+      # only packs package.json + lib/*.js. It also avoids `yarn` failing on
+      # the ${NODE_AUTH_TOKEN} placeholder setup-node writes to .npmrc, which
+      # is never set here (publish auth uses npm Trusted Publishers / OIDC).
+      - run: npm publish
