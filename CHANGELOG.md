@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **BREAKING**: Debug logs are now enabled with `NODE_DEBUG=njre` (built-in `util.debuglog`) instead of `DEBUG=njre`
 - Add proxy support through the standard `HTTPS_PROXY` / `HTTP_PROXY` / `NO_PROXY` environment variables, including Basic auth credentials in the proxy URL (#30)
 - Reduce direct dependencies from 5 to 2 (`tar` and `yauzl` only): replace `node-fetch` with the Node.js built-in `https` module, drop the unused `command-exists-promise`, and replace `debug` with `util.debuglog`
-- Modernize `lib/install.js` (async/await, `fs/promises`, stream pipelines); downloads now use a socket-inactivity timeout instead of a total-time limit
+- Modernize `lib/install.js` (async/await, `fs/promises`, stream pipelines); downloads now use a socket-inactivity timeout instead of a total-time limit, retry up to 3 times on transient network errors (connection resets, HTTP 5xx), and hash the archive with constant memory
 - Remove the generated DOCS.md: the API is documented in README.md, development info in CLAUDE.md
 - Fix: the Java 8 → 11 fallback (Java 8 is not published for macOS) is now based on the **target** OS (`options.os`) instead of the host platform, so installing a Linux or Windows JRE 8 from a Mac no longer silently installs Java 11
 - Fix: ZIP extraction now waits for each file to be fully written and closed on disk before moving to the next entry, instead of only waiting for the read stream to end (installs could end up with empty or truncated files, mostly on Windows)

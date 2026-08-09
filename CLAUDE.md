@@ -10,13 +10,10 @@ njre downloads a JRE/JDK from the Adoptium API, verifies its SHA-256 checksum an
 
 ## Commands
 
-```bash
-yarn install          # ALWAYS use yarn, not npm: yarn.lock is the source of truth
-yarn test             # node:test suite (downloads real JRE/JDK binaries, needs network, takes a few minutes)
-yarn coverage         # same suite with native coverage (--experimental-test-coverage)
-yarn lint             # prettier --check
-yarn lint:fix         # prettier --write
-```
+- `yarn install` - ALWAYS use yarn, not npm: yarn.lock is the source of truth
+- `yarn test` runs the node:test suite. It downloads real JRE/JDK binaries, so it needs network access and takes a few minutes
+- `yarn coverage` is the same suite with native coverage (`--experimental-test-coverage`)
+- `yarn lint` checks formatting with prettier, and `yarn lint:fix` rewrites the files
 
 ## Implementation notes
 
@@ -28,7 +25,7 @@ yarn lint:fix         # prettier --write
 ## Style and CI
 
 - Code style is prettier (enforced by MegaLinter, `JAVASCRIPT_DEFAULT_STYLE: prettier` in `.mega-linter.yml`). Do not use standard/eslint styles.
-- CI (`.github/workflows/test.yml`) runs the mocha suite on a matrix of OS (ubuntu/macos/windows) × Node versions.
+- CI (`.github/workflows/test.yml`) runs the node:test suite on a matrix of OS (ubuntu/macos/windows) × Node versions.
 - Documentation lives in README.md only - there is no generated DOCS.md anymore, keep the README API table in sync with the JSDoc of `install()`.
 
 ## Releasing

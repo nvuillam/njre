@@ -75,7 +75,7 @@ after(() => {
   }
 });
 
-describe("Install configurations", { timeout: TIMEOUT }, () => {
+describe("Install configurations", () => {
   it("should install JRE with default options", { timeout: TIMEOUT }, () => {
     return njre.install();
   });
@@ -131,7 +131,7 @@ describe("Install configurations", { timeout: TIMEOUT }, () => {
   );
 });
 
-describe("Errors", { timeout: TIMEOUT }, () => {
+describe("Errors", () => {
   it("should reject an unsupported vendor", () => {
     return assert.rejects(
       njre.install(17, { vendor: "unknown-vendor" }),
@@ -151,7 +151,7 @@ describe("Errors", { timeout: TIMEOUT }, () => {
   });
 });
 
-describe("Proxy", { timeout: TIMEOUT }, () => {
+describe("Proxy", () => {
   const PROXY_USER = "user";
   const PROXY_PASSWORD = "p@ss word";
   const savedEnv = {};
@@ -159,6 +159,7 @@ describe("Proxy", { timeout: TIMEOUT }, () => {
   let proxy;
   let proxyPort;
   let tunnels;
+  let tunnelBytes;
 
   before(async () => {
     for (const key of [
@@ -183,6 +184,9 @@ describe("Proxy", { timeout: TIMEOUT }, () => {
       socket.on("close", () => openSockets.delete(socket));
     });
     proxy.on("connect", (req, clientSocket, head) => {
+      // A client may reset the connection at any point (e.g. right after
+      // receiving a 407): never let that surface as an unhandled 'error'
+      clientSocket.on("error", () => {});
       if (req.headers["proxy-authorization"] !== expectedAuth) {
         clientSocket.end(
           "HTTP/1.1 407 Proxy Authentication Required\r\nProxy-Authenticate: Basic\r\n\r\n",
@@ -194,6 +198,9 @@ describe("Proxy", { timeout: TIMEOUT }, () => {
       const serverSocket = net.connect(Number(port) || 443, host, () => {
         clientSocket.write("HTTP/1.1 200 Connection Established\r\n\r\n");
         serverSocket.write(head);
+        // Count the payload actually traversing the tunnel: opened tunnels
+        // alone do not prove the requests are not going direct
+        serverSocket.on("data", (data) => (tunnelBytes += data.length));
         serverSocket.pipe(clientSocket);
         clientSocket.pipe(serverSocket);
       });
@@ -225,15 +232,24 @@ describe("Proxy", { timeout: TIMEOUT }, () => {
     { timeout: TIMEOUT },
     async () => {
       tunnels = 0;
+      tunnelBytes = 0;
       const credentials = `${encodeURIComponent(PROXY_USER)}:${encodeURIComponent(PROXY_PASSWORD)}`;
       process.env.HTTPS_PROXY = `http://${credentials}@127.0.0.1:${proxyPort}`;
       await installAndCheck("proxy", 17, {}, 17);
-      assert.ok(tunnels > 0, "no request went through the proxy");
+      assert.ok(tunnels > 0, "no tunnel was opened through the proxy");
+      assert.ok(
+        tunnelBytes > 1000000,
+        `payload did not traverse the proxy tunnel (${tunnelBytes} bytes seen)`,
+      );
     },
   );
 
   it("should fail with wrong proxy credentials", { timeout: TIMEOUT }, () => {
-    process.env.HTTPS_PROXY = `http://user:wrong@127.0.0.1:${proxyPort}`;
+    // Built through the URL API so no credential-looking literal is committed
+    const badProxy = new URL(`http://127.0.0.1:${proxyPort}`);
+    badProxy.username = PROXY_USER;
+    badProxy.password = "not-the-password";
+    process.env.HTTPS_PROXY = badProxy.href;
     return assert.rejects(
       njre.install(17, { installPath: tmpInstallPath("proxybadauth") }),
       /Proxy CONNECT failed with HTTP 407/,
