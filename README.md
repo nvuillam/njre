@@ -39,7 +39,7 @@ const dir = await njre.install(21, { type: "jdk", installPath: "/opt/my-app" });
 Downloads and extracts a JRE/JDK copy for the app. Resolves to the installation directory (a `jre` folder containing the extracted `jdk-...` distribution), or rejects with an error.
 
 | Param                    | Type     | Default                             | Description                                                                                                                                                |
-| ------------------------ | -------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------|----------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `[version]`              | `number` | `8`                                 | Java major version (e.g. `8`/`11`/`17`/`21`). On macOS the minimum is `11`.                                                                                |
 | `[options.os]`           | `string` | current OS                          | Operating System (`windows`/`mac`/`linux`/`solaris`/`aix`)                                                                                                 |
 | `[options.arch]`         | `string` | current CPU                         | Architecture (`x64`/`x32`/`ppc64`/`s390x`/`ppc64le`/`aarch64`/`sparcv9`)                                                                                   |
