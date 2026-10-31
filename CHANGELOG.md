@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] (beta, main branch content)
 
+## [v3.0.1] - 2026-10-31
+
+- Upgrade dependencies
+- Replace megalinter skills by megalinter plugin
+
 ## [v3.0.0] - 2026-08-09
 
 - **BREAKING**: Require Node.js >= 18 (`engines` was previously `>=8`)
