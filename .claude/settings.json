@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "extraKnownMarketplaces": {
+    "megalinter": {
+      "source": {
+        "source": "github",
+        "repo": "oxsecurity/megalinter"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "megalinter@megalinter": true
+  }
+}
